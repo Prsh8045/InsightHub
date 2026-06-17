@@ -61,6 +61,35 @@ DATABASE_URL="postgresql://postgres:Admin123@localhost:5432/insighthub"
 
 JWT_SECRET=supersecretkey
 ```
+## Demo Users
+
+After running the seed script, the following users will be available:
+
+| Role    | Email                                         | Password |
+| ------- | --------------------------------------------- | -------- |
+| Admin   | [alice@example.com](mailto:alice@example.com) | password |
+| Analyst | [bob@example.com](mailto:bob@example.com)     | password |
+| Viewer  | [carol@example.com](mailto:carol@example.com) | password |
+
+Run seed data:
+
+```bash
+npx prisma db seed
+```
+
+Default Workspace:
+
+```text
+Sales Dashboard
+```
+
+Roles available:
+
+```text
+ADMIN
+ANALYST
+VIEWER
+```
 
 ## Author
 
