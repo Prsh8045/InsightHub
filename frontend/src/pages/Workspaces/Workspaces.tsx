@@ -41,13 +41,17 @@ export default function Workspaces() {
         <Row gutter={[20, 20]} className="workspace-grid">
           {workspaces.map((workspace) => (
             <Col key={workspace.id} xs={24} sm={12} lg={8}>
-              <Card className="workspace-card" bordered={false}>
+              <Card
+                className="workspace-card"
+                bordered={false}
+                onClick={() => navigate(`/dashboard/${workspace.id}`)}
+              >
                 <div style={{ marginBottom: 16 }}>
                   <Title level={4}>{workspace.name}</Title>
                   <Text type="secondary">Role: {workspace.role}</Text>
                 </div>
                 <div className="workspace-actions">
-                  <Button type="primary" onClick={() => navigate(`/dashboard/${workspace.id}`)} block>
+                  <Button type="primary" block>
                     Open Workspace
                   </Button>
                 </div>
